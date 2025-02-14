@@ -20,7 +20,7 @@ IMAGE_DATE=$(echo $CONTAINERS | grep -oP '(?<=href=")[^"]+' | tail -1)
 test -z "$IMAGE_DATE" && echo "Fedora version not found" && exit 1
 
 IMAGE_SRC=https://images.linuxcontainers.org/images/fedora/$FEDORA_VER/arm64/default/${IMAGE_DATE}rootfs.tar.xz
-KERNEL_SRC=https://github.com/linsyking/imagebuilder/releases/download/6.13.1/6.13.1-stb-cbq.tar.gz
+KERNEL_SRC=https://github.com/hexdump0815/linux-mainline-and-mali-generic-stable-kernel/releases/download/6.12.12-stb-cbq%2B/6.12.12-stb-cbq+.tar.gz
 GIT_DIR=.
 BUILD_ROOT=compile/imagebuilder-root
 DOWNLOAD_DIR=compile/imagebuilder-download
